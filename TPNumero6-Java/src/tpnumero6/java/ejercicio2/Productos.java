@@ -4,11 +4,13 @@
  */
 package tpnumero6.java.ejercicio2;
 
+
+
 /**
  *
  * @author Taigo Capo
  */
-public class Productos {
+public class Productos implements Comparable<Productos> {
     
     private int codigo;
     private String descripcion;
@@ -38,7 +40,64 @@ public class Productos {
     }
     
     
+    public Productos(int codigo, String descripcion, double precio,int stock, String rubros){
+        this.codigo=codigo;
+        this.descripcion=descripcion;
+        this.precio=precio;
+        this.stock=stock;
+        this.rubros=rubros;
+    }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public String getRubros() {
+        return rubros;
+    }
+
+    public void setRubros(String rubros) {
+        this.rubros = rubros;
+    }
+
+    @Override
+public int compareTo(Productos otro) {
+    return Integer.compare(this.codigo, otro.codigo);
+}
+
+
+    
+    
+    
+   
 
 
 
